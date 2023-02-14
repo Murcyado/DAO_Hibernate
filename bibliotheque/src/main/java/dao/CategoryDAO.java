@@ -3,22 +3,20 @@ package dao;
 import java.util.List;
 
 import entities.Category;
+import principale.Main;
 
 public class CategoryDAO {
 	
 	//Méthode pour l'insertion d'une catégorie dans la BD
 	public static void addCategory(Category obj) 
 	{
-		//...
+		Main.categories.add(obj);
 	}
 	
 	// méthode retournant toutes les catégories de la base
 	public static List<Category> listCategories() 
 	{
-		//...
-		List<Category> categories = null;
-		//...
-		return categories;
+		return Main.categories;
 	}
 	
 	//Méthode pour la suppression d'une catégorie dans la BD
