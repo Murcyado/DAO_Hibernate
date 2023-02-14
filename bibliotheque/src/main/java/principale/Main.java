@@ -1,5 +1,6 @@
 package principale;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,10 +44,12 @@ public class Main {
 		
 		
 		//Livres
-		Livre  l1 = new Livre(1,"Développement",100,null, 2);
+		Livre  l1 = new Livre(1,"Développement",100,LocalDate.of(2022, 11, 25), 2);
+		Livre  l2 = new Livre(2,"Test d'Histoire",25,LocalDate.of(2021, 12, 14), 6);
 		
 		LivreDAO.addLivre(l1);
-		System.out.println("Liste de livres");
+		LivreDAO.addLivre(l2);
+		System.out.println("Liste de livres : ");
 		System.out.println(LivreDAO.listLivres());
 
 	}
